@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "@/app/globals.css";
 import { CustomCursor } from "@/components/cursor/CustomCursor";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={geistMono.variable}>
         <CustomCursor />
         {children}
+        <Analytics />
       </body>
     </html>
   );
