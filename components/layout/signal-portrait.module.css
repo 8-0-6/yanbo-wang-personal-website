@@ -1,0 +1,44 @@
+.frame {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #e8e2c8;
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.09) 0.4px, transparent 0.4px);
+  background-size: 2px 2px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.ascii {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 12px 8px;
+  color: #0f0f0f;
+  font-family: var(--font-mono), monospace;
+  font-size: 6.1px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  white-space: pre;
+  user-select: none;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  color: rgba(18, 18, 18, 0.6);
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}

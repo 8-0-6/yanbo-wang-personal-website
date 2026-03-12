@@ -1,0 +1,51 @@
+.statement {
+  max-width: none;
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: var(--space-lg);
+  white-space: normal;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.email {
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.93rem;
+  color: var(--accent-pink);
+  letter-spacing: -0.2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  width: fit-content;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.email:hover {
+  opacity: 0.75;
+}
+
+.link {
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.93rem;
+  color: var(--accent-pink);
+  letter-spacing: -0.2px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+  .contactRow {
+    gap: var(--space-xs) var(--space-md);
+  }
+}

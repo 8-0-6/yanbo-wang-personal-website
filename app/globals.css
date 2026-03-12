@@ -1,0 +1,104 @@
+:root {
+  --font-display: var(--font-geist-mono), "Courier New", Courier, monospace;
+  --font-body: var(--font-geist-mono), "Courier New", Courier, monospace;
+  --font-mono: var(--font-geist-mono), "Courier New", Courier, monospace;
+  --bg: #ffffff;
+  --text: #282828;
+  --muted: rgba(34, 34, 34, 0.39);
+  --line: rgba(34, 34, 34, 0.14);
+  --accent-pink: #ea587d;
+  --accent-blue: #0000ee;
+  --radius: 11px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 64px;
+  --content-width: min(1180px, calc(100vw - 48px));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14.5px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+body * {
+  font-family: var(--font-geist-mono), "Courier New", Courier, monospace !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+body[data-cursor-ready="true"],
+body[data-cursor-ready="true"] a,
+body[data-cursor-ready="true"] button,
+body[data-cursor-ready="true"] [role="button"] {
+  cursor: none;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(234, 88, 125, 0.16);
+  color: var(--text);
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: -0.2px;
+  text-transform: capitalize;
+}
+
+.mono {
+  font-family: var(--font-mono), sans-serif;
+}
+
+@media (max-width: 720px) {
+  :root {
+    --content-width: min(100vw - 24px, 1180px);
+  }
+}

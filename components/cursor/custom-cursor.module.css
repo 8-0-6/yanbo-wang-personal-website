@@ -1,0 +1,94 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 140;
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  mix-blend-mode: difference;
+  transform: translate3d(-100px, -100px, 0);
+  transition:
+    opacity 120ms ease,
+    filter 180ms ease;
+  will-change: transform;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.core,
+.frame,
+.bracket {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.core {
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+}
+
+.frame {
+  width: 20px;
+  height: 20px;
+  transition: transform 180ms ease;
+}
+
+.bracket {
+  width: 6px;
+  height: 6px;
+  border: 1px solid currentColor;
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+  transform: none;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.topRight {
+  top: 0;
+  right: 0;
+  left: auto;
+  transform: none;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.bottomLeft {
+  bottom: 0;
+  left: 0;
+  top: auto;
+  transform: none;
+  border-right: 0;
+  border-top: 0;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+  top: auto;
+  left: auto;
+  transform: none;
+  border-left: 0;
+  border-top: 0;
+}
+
+.active .core {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.active .frame {
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.pressed .frame {
+  transform: translate(-50%, -50%) scale(0.92);
+}

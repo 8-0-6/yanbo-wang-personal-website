@@ -1,0 +1,17 @@
+.copy {
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: clamp(6px, 1.2svh, 12px);
+  margin-left: 0;
+}
+
+.statement {
+  font-family: var(--font-body);
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  white-space: normal;
+}

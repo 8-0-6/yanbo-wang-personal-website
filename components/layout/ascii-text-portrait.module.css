@@ -1,0 +1,34 @@
+.frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #f4f4f4;
+}
+
+.pre {
+  width: 100%;
+  height: auto;
+  padding: 10px 8px;
+  color: #111;
+  font-family: var(--font-mono), monospace;
+  font-size: 1.7px;
+  line-height: 1;
+  letter-spacing: 0;
+  white-space: pre;
+  -webkit-font-smoothing: none;
+  text-rendering: geometricPrecision;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--muted);
+  font-family: var(--font-mono), sans-serif;
+  font-size: 0.72rem;
+  text-transform: capitalize;
+}

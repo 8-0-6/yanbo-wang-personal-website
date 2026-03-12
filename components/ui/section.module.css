@@ -1,0 +1,25 @@
+.section {
+  padding: 0 0 var(--space-xxl);
+}
+
+.figletTitle {
+  margin: 0 0 var(--space-lg);
+  color: var(--text);
+  font-family: var(--font-mono), monospace;
+  font-weight: 800;
+  text-shadow: 0.35px 0 currentColor;
+  white-space: pre;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
