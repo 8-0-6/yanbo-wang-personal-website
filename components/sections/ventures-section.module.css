@@ -102,3 +102,17 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .grid {
+    gap: var(--space-md);
+  }
+
+  .card {
+    padding: var(--space-md);
+  }
+
+  .name {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}

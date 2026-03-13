@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "@/app/globals.css";
@@ -7,6 +7,13 @@ import { CustomCursor } from "@/components/cursor/CustomCursor";
 export const metadata: Metadata = {
   title: "Yanbo Wang",
   description: "Founder-builder exploring product, growth, ventures, and ideas."
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: "cover"
 };
 
 const geistMono = Geist_Mono({

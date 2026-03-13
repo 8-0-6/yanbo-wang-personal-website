@@ -23,7 +23,10 @@
   text-shadow: 0.35px 0 currentColor;
   line-height: 1;
   white-space: pre;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
 .forceAmatic .figletName,
@@ -82,9 +85,14 @@
 }
 
 .navItem {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
-  padding: 0;
+  padding: 0.5em 0.35em;
+  min-height: 44px;
+  min-width: 44px;
+  box-sizing: border-box;
   color: var(--muted);
   font-family: var(--font-mono), sans-serif;
   font-size: 0.93rem;
@@ -149,6 +157,10 @@
     align-self: flex-start;
   }
 
+  .figletName {
+    font-size: clamp(14px, 4vw, 28px) !important;
+  }
+
   .nav {
     justify-content: flex-start;
     column-gap: 10px;
@@ -177,5 +189,28 @@
     margin-top: 6px;
     align-self: flex-start;
     overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 480px) {
+  .rail {
+    padding: 12px 0 0;
+    gap: 14px;
+  }
+
+  .portraitWrap {
+    width: min(220px, 85vw);
+  }
+
+  .nav {
+    column-gap: 6px;
+    margin-top: 6px;
+  }
+
+  .navItem {
+    font-size: 0.75rem;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.4em 0.25em;
   }
 }
