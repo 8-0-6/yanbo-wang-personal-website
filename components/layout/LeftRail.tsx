@@ -33,7 +33,7 @@ export function LeftRail({ profile, defaultSection = "about" }: LeftRailProps) {
   const isNotesSection = activeSection === "notes";
   const isContactSection = activeSection === "contact";
   const portraitSrc = isAboutSection
-    ? "/images/about-section-portrait-v2.png"
+    ? "/images/about.png"
     : isVenturesSection
       ? "/images/ventures-section-portrait-v3.png"
       : isExperienceSection

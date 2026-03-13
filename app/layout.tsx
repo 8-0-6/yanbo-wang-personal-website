@@ -7,8 +7,30 @@ import { FigletPrerenderProvider } from "@/components/providers/FigletPrerenderP
 import figletPrerender from "@/data/figlet-prerender.json";
 
 export const metadata: Metadata = {
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL
+    ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+    : undefined,
   title: "Yanbo Wang",
-  description: "Founder-builder exploring product, growth, ventures, and ideas."
+  description: "Founder-builder exploring product, growth, ventures, and ideas.",
+  openGraph: {
+    title: "Yanbo Wang",
+    description: "Founder-builder exploring product, growth, ventures, and ideas.",
+    images: [
+      {
+        url: "/images/about.png",
+        width: 1200,
+        height: 630,
+        alt: "Portrait of Yanbo Wang",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yanbo Wang",
+    description: "Founder-builder exploring product, growth, ventures, and ideas.",
+    images: ["/images/about.png"],
+  },
 };
 
 export const viewport: Viewport = {
