@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useFigletPrerender } from "@/components/providers/FigletPrerenderProvider";
 
 type FigletAsciiProps = {
   text: string;
@@ -12,6 +13,10 @@ type FigletAsciiProps = {
 };
 
 const loadedFonts = new Set<string>();
+
+function getPrerenderKey(text: string, fontName: string): string {
+  return `${text}|${fontName}`;
+}
 
 type RainbowGlyph = {
   lines: string[];
@@ -35,7 +40,10 @@ export function FigletAscii({
   targetHeightPx,
   rainbow = false
 }: FigletAsciiProps) {
-  const [asciiArt, setAsciiArt] = useState(text);
+  const prerender = useFigletPrerender();
+  const prerenderKey = getPrerenderKey(text, fontName);
+  const initialAscii = (prerender && prerender[prerenderKey]) ?? text;
+  const [asciiArt, setAsciiArt] = useState(initialAscii);
   const [rainbowGlyphs, setRainbowGlyphs] = useState<RainbowGlyph[]>([]);
 
   useEffect(() => {

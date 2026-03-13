@@ -3,6 +3,8 @@ import { Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "@/app/globals.css";
 import { CustomCursor } from "@/components/cursor/CustomCursor";
+import { FigletPrerenderProvider } from "@/components/providers/FigletPrerenderProvider";
+import figletPrerender from "@/data/figlet-prerender.json";
 
 export const metadata: Metadata = {
   title: "Yanbo Wang",
@@ -28,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geistMono.variable}>
-        <CustomCursor />
-        {children}
-        <Analytics />
+        <FigletPrerenderProvider prerender={figletPrerender as Record<string, string>}>
+          <CustomCursor />
+          {children}
+          <Analytics />
+        </FigletPrerenderProvider>
       </body>
     </html>
   );
