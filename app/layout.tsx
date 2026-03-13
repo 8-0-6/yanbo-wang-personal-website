@@ -6,22 +6,30 @@ import { CustomCursor } from "@/components/cursor/CustomCursor";
 import { FigletPrerenderProvider } from "@/components/providers/FigletPrerenderProvider";
 import figletPrerender from "@/data/figlet-prerender.json";
 
+const CANONICAL_ORIGIN = "https://www.yanbowang.space";
+
 export const metadata: Metadata = {
-  // Use www so og:image URL returns 200; non-www redirects (307) and X's crawler won't follow for images
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.yanbowang.space"
-  ),
+  metadataBase: new URL(CANONICAL_ORIGIN),
   title: "Yanbo Wang",
   description: "Founder-builder exploring product, growth, ventures, and ideas.",
   openGraph: {
     title: "Yanbo Wang",
     description: "Founder-builder exploring product, growth, ventures, and ideas.",
     type: "website",
+    images: [
+      {
+        url: `${CANONICAL_ORIGIN}/images/about.png`,
+        width: 1200,
+        height: 630,
+        alt: "Portrait of Yanbo Wang",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Yanbo Wang",
     description: "Founder-builder exploring product, growth, ventures, and ideas.",
+    images: [`${CANONICAL_ORIGIN}/images/about.png`],
   },
 };
 
