@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${CANONICAL_ORIGIN}/images/about.png`,
+        url: `${CANONICAL_ORIGIN}/images/og-about.png`,
         width: 1200,
         height: 630,
         alt: "Portrait of Yanbo Wang",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yanbo Wang",
     description: "Founder-builder exploring product, growth, ventures, and ideas.",
-    images: [`${CANONICAL_ORIGIN}/images/about.png`],
+    images: [`${CANONICAL_ORIGIN}/images/og-about.png`],
   },
 };
 
