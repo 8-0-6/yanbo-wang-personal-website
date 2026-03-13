@@ -94,8 +94,6 @@ export function HomeContent({
 
     const scrollRoot = stage.closest("section");
     const observerRoot = isScrollableSectionRoot(scrollRoot) ? scrollRoot : null;
-    const isNarrowViewport = typeof window !== "undefined" && window.matchMedia("(max-width: 1040px)").matches;
-    const rootMargin = isNarrowViewport ? "-25% 0px -25% 0px" : "-45% 0px -45% 0px";
     const observer = new IntersectionObserver(
       (entries) => {
         let activeId = "";
@@ -123,7 +121,7 @@ export function HomeContent({
       },
       {
         root: observerRoot,
-        rootMargin,
+        rootMargin: "-45% 0px -45% 0px",
         threshold: 0
       }
     );

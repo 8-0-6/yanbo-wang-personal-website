@@ -80,19 +80,3 @@
     height: min(440px, calc(100svh - 200px));
   }
 }
-
-@media (max-width: 720px) {
-  .board {
-    height: min(380px, calc(100svh - 180px));
-  }
-}
-
-@media (max-width: 480px) {
-  .board {
-    height: min(320px, calc(100svh - 160px));
-  }
-
-  .controls {
-    margin-bottom: var(--space-sm);
-  }
-}

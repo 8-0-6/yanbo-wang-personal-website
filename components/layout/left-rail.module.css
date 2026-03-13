@@ -8,6 +8,8 @@
   gap: 14px;
   min-height: calc(100svh - 48px);
   padding: 20px 32px 24px 0;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .identity {
@@ -23,10 +25,7 @@
   text-shadow: 0.35px 0 currentColor;
   line-height: 1;
   white-space: pre;
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 .forceAmatic .figletName,
@@ -85,14 +84,9 @@
 }
 
 .navItem {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   white-space: nowrap;
-  padding: 0.5em 0.35em;
-  min-height: 44px;
-  min-width: 44px;
-  box-sizing: border-box;
+  padding: 0;
   color: var(--muted);
   font-family: var(--font-mono), sans-serif;
   font-size: 0.93rem;
@@ -114,6 +108,7 @@
 
 .tagline {
   width: min(100%, 360px);
+  max-width: 100%;
   margin-top: 16px;
   color: var(--text);
   font-family: var(--font-mono), sans-serif;
@@ -122,6 +117,8 @@
   line-height: 1.32;
   text-align: center;
   text-wrap: wrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
   text-transform: none;
   align-self: center;
 }
@@ -141,10 +138,14 @@
   .rail {
     position: static;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     min-height: auto;
-    padding: 16px 0 0;
-    gap: 18px;
+    padding: 12px 0 0;
+    gap: 12px;
+  }
+
+  .identity {
+    align-self: stretch;
   }
 
   .figletName {
@@ -152,21 +153,18 @@
   }
 
   .portraitWrap {
-    margin-top: 18px;
+    margin-top: 28px;
     width: min(260px, 72vw);
-    align-self: flex-start;
-  }
-
-  .figletName {
-    font-size: clamp(14px, 4vw, 28px) !important;
+    align-self: center;
   }
 
   .nav {
-    justify-content: flex-start;
+    justify-content: center;
     column-gap: 10px;
-    margin-top: 8px;
-    align-self: flex-start;
+    margin-top: 6px;
+    align-self: center;
     width: 100%;
+    max-width: 100%;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -184,33 +182,12 @@
 
   .tagline {
     width: 100%;
-    text-align: left;
+    max-width: 100%;
+    text-align: center;
     font-size: 0.84rem;
-    margin-top: 6px;
-    align-self: flex-start;
-    overflow-wrap: anywhere;
-  }
-}
-
-@media (max-width: 480px) {
-  .rail {
-    padding: 12px 0 0;
-    gap: 14px;
-  }
-
-  .portraitWrap {
-    width: min(220px, 85vw);
-  }
-
-  .nav {
-    column-gap: 6px;
-    margin-top: 6px;
-  }
-
-  .navItem {
-    font-size: 0.75rem;
-    min-width: 40px;
-    min-height: 40px;
-    padding: 0.4em 0.25em;
+    margin-top: 4px;
+    align-self: center;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }

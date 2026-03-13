@@ -37,8 +37,6 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
 }
 
 html,
@@ -102,15 +100,5 @@ img {
 @media (max-width: 720px) {
   :root {
     --content-width: min(100vw - 24px, 1180px);
-  }
-
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    --content-width: min(100vw - 16px, 1180px);
   }
 }
