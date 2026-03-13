@@ -15,21 +15,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yanbo Wang",
     description: "Founder-builder exploring product, growth, ventures, and ideas.",
-    images: [
-      {
-        url: "/images/about.png",
-        width: 1200,
-        height: 630,
-        alt: "Portrait of Yanbo Wang",
-      },
-    ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Yanbo Wang",
     description: "Founder-builder exploring product, growth, ventures, and ideas.",
-    images: ["/images/about.png"],
   },
 };
 
