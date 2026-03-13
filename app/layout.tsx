@@ -7,9 +7,9 @@ import { FigletPrerenderProvider } from "@/components/providers/FigletPrerenderP
 import figletPrerender from "@/data/figlet-prerender.json";
 
 export const metadata: Metadata = {
-  metadataBase: process.env.NEXT_PUBLIC_SITE_URL
-    ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
-    : undefined,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://yanbowang.space"
+  ),
   title: "Yanbo Wang",
   description: "Founder-builder exploring product, growth, ventures, and ideas.",
   openGraph: {
